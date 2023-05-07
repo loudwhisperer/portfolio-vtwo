@@ -20,9 +20,9 @@ import Projects from "./components/pages/Projects";
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/react-portfolio" element={<Root />}>
+      <Route path="/" element={<Root />}>
         <Route path="contact" element={<Contact />} />
-        <Route path="/react-portfolio" element={<About />} />
+        <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="projects" element={<Projects />} />
       </Route>
@@ -36,7 +36,7 @@ export default function App() {
 }
 const Root = () => {
   return (
-      <div>
+      <div id="root">
         <NavTabs />
         <Outlet />
         <Footer />
