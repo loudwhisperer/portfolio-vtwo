@@ -30,7 +30,7 @@ export default function Footer(){
     },
   ];
     return (
-    <footer className="bg-gray-700 m-1 shadow-md w-full fixed bottom-0 left-0">
+    <footer className="bg-base-100 m-1 shadow-md w-full fixed bottom-0 left-0">
     <div className="max-w-screen-xl px-2 py-6 mx-auto space-y-6 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2 z-[-1]">
                    <ul
@@ -39,10 +39,10 @@ export default function Footer(){
             >
            {Something.map((totem) => {
                 return (
-                  <li key={totem.id} className="text-4xl text-indigo-600 lg:mr-10  sm:mr-2 px-5 py-2 sm:text-2xl"> 
+                  <li key={totem.id} className="text-4xl lg:mr-10  sm:mr-2 px-5 py-2 sm:text-2xl"> 
                   <Link
                       to={totem.link}
-                      className="text-4xl text-indigo-600 mr-3 pt-2"
+                      className="text-4xl text-white mr-3 pt-2"
                       target="_blank"
                     >
                       <ion-icon name={totem.icon}></ion-icon>
@@ -52,7 +52,7 @@ export default function Footer(){
               })}
               </ul>
         </nav>
-        <p className="mt-8 text-base leading-6 text-center text-indigo-600">
+        <p className="mt-8 text-base leading-6 text-center text-white">
             © 2023 Brendan Borowski
         </p>
     </div>
