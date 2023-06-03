@@ -1,10 +1,77 @@
 import React from "react";
+import markTheMiddle from "../../assets/markthemiddle.png";
+import theTable from "../../assets/the-table.png"
+import weather from "../../assets/weather.png"
+import scribe from "../../assets/thescribe.png";
+import noteKeeper from "../../assets/notes.png";
+import scheduler from "../../assets/page-intro.png";
 
 export default function About(){
-
-     <>
-      <h1>
-      Hello world!
-    </h1>
-    </>
+   let Item = [
+    {
+      name: "Mark Me in the Middle",
+      link: "https://artiecannv.github.io/mark-me-in-the-middle/",
+      description:
+        "Uses the Mapbox JS Framework to utilize a map which will create a line between two points and mark the exact center between the two then using the Four Square API returns mulitple locations in that center point",
+      image: markTheMiddle,
+      id: 1,
+    },
+    {
+      name: "The Table",
+      link: "https://the-table-app.herokuapp.com/",
+      description:
+        "The Table gives users a space to create, manage and give details to a board game, video game or tabletop roleplaying game meetup and has emailing built in to notify users attached to a game of thier invite status and the detsails therein. ",
+      image: theTable,
+      id: 2,
+    },
+    {
+      name: "Weather Application",
+      link: "https://loudwhisperer.github.io/info-for-the-stormy-folks/",
+      description:
+        "Allows users to check a five dat forecast of the current weather in their location and saves prior searches so there is no need to query again",
+      image: weather,
+      id: 3,
+    },
+    {
+      name: "The Scribe",
+      link: "https://the-scribe.herokuapp.com/",
+      description:
+        "A Reddit-like forum with a user profile that stores information for Dungeon Masters and GM's alike",
+      image: scribe,
+      id: 4,
+    },
+    {
+      name: "Note Keeper",
+      link: "https://notekeeper-guide-thingy.herokuapp.com/",
+      description:
+        "Utilizes Express JS and Sequelize to create API routes that allow users to create, save and a simplfied database (JSON DB) of their previous notes",
+      image: noteKeeper,
+      id: 5,
+    },
+    {
+      name: "Work Day Scheduler",
+      link: "https://loudwhisperer.github.io/supreme-couscous-scheduler-ultra/",
+      description:
+        "Utilizes Bootstrap CSS, Dayjs, Jquery and Local Storage to give the user the ability to scedule their workday by hour and save those times to local storage by hour.",
+      image: scheduler,
+      id: 6,
+    },
+  ];
+return(
+     <section className="flex justify-center align-center h-fit flex-wrap ml-44 mr-44 mt-44 mb-32 sm:ml-0 sm:mr-0">
+      { Item.map((project) => {
+        return(
+      <div className="max-w-sm rounded overflow-hidden shadow-lg m-4  w-4/5 group">
+        <div className="relative overflow-hidden">
+        <img src={project.image} className="w-full object-cover"/>
+            <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 text-center">
+                  <h3 className="w-full h-full text-center bg-black/20">{project.name}</h3>
+                  <p className="bg-black/20 text-white w-full h-full text-center px-6">{project.description}</p>
+                  </div>
+        </div>
+        </div>
+        )
+})}
+    </section>
+)
 }
