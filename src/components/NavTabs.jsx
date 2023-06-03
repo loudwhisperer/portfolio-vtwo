@@ -15,12 +15,11 @@ function closeMenu(){
   ];
   
     return (
-<div className="navbar bg-base-100 w-full fixed top-0 left-0 z-50">
-  <div className="navbar-start"></div>
-  <div className="navbar-center">
- <div className="dropdown dropdown-end" onClick={() => setShowNav(true)}>
+<div className="navbar  w-full fixed top-0 left-0 z-50">
+  <div className="navbar-start">
+     <div className="dropdown dropdown-end" onClick={() => setShowNav(true)}>
       <label tabIndex={0} >
-         <p className="btn btn-ghost normal-case text-xl">- Brendan Borowski -</p>
+         <p className="btn btn-ghost normal-case text-xl ml-10"> Brendan Borowski </p>
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
        {Links.map((link) =>{
@@ -30,6 +29,20 @@ function closeMenu(){
        })}
       </ul>
     </div>
+  </div>
+  <div className="navbar-center">
+ {/* <div className="dropdown dropdown-end" onClick={() => setShowNav(true)}>
+      <label tabIndex={0} >
+         <p className="btn btn-ghost normal-case text-xl">- Brendan Borowski -</p>
+      </label>
+      <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+       {Links.map((link) =>{
+        return(
+          <li><Link to={link.link} key={link.id} className="ted" onClick={closeMenu}>{link.name}</Link></li>
+        )
+       })}
+      </ul> */}
+    {/* </div> */}
   </div>
   <div className="navbar-end">
   </div>
