@@ -23,7 +23,7 @@ export default function Projects(){
       link: "https://the-table-app.herokuapp.com/",
       gitLink:"https://github.com/loudwhisperer/sturdy-table",
       description:
-        "The Table gives users a space to create, manage and give details to a board game, video game or tabletop roleplaying game meetup and has emailing built in to notify users attached to a game of thier invite status and the detsails therein. ",
+        "The Table gives users a space to create and manage a board game,video game or tabletop roleplaying meetup. It has emailing built in to notify users attached to a game of thier invite status and the details therein.",
       image: theTable,
       id: 2,
     },
@@ -40,10 +40,10 @@ export default function Projects(){
       name: "The Scribe",
       link: "https://the-scribe.herokuapp.com/",
       gitLink:"https://github.com/josht-dev/the-scribe",
-      description:
-        "A Reddit-like forum with a user profile that stores information for Dungeon Masters and GM's alike",
+      description:"A Reddit-like forum with a user profile that stores information for Dungeon Masters and GM's alike",
       image: scribe,
       id: 4,
+      style: {paddingBottom: "3rem"}
     },
     {
       name: "Note Keeper",
@@ -65,10 +65,10 @@ export default function Projects(){
     },
   ];
 return(
-     <section className="flex justify-center align-center h-fit flex-wrap ml-44 mr-44 mb-32 sm:ml-0 sm:mr-0 z-10">
+     <section className="flex justify-center align-center h-fit flex-wrap ml-44 mr-44 mb-32 sm:ml-0 sm:mr-0 z-10 ">
       { Item.map((project) => {
         return(
-      <div className="max-w-sm rounded overflow-hidden shadow-lg m-4  w-4/5 group" key={project.id}>
+      <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 w-4/5 group" key={project.id} id="projCards">
         <div className="relative overflow-hidden">
         <img src={project.image} className="w-full object-cover"/>
             <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 text-center">
@@ -78,6 +78,7 @@ return(
                       to={project.link}
                       className="text-4xl text-white px-3"
                       target="_blank"
+                      style={project.style}
                        >
                       <ion-icon name="unlink"></ion-icon>
                     </Link>

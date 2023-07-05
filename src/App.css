@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+#projCards{
+  max-width: 24rem;
+  max-height: 12rem;
+}
