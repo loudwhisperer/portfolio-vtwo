@@ -45,3 +45,11 @@
   max-width: 24rem;
   max-height: 12rem;
 }
+
+body{
+  background-color: #EEF1FF;
+}
+
+#footer{
+  background-color: #b1b2ff;
+}
