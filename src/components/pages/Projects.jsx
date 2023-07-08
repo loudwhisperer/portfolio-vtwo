@@ -65,7 +65,7 @@ export default function Projects(){
     },
   ];
 return(
-     <section className="flex justify-center align-center h-fit flex-wrap ml-44 mr-44 mb-32 sm:ml-0 sm:mr-0 z-10 ">
+     <section className="flex justify-center align-center h-fit flex-wrap ml-44 mr-44 mb-32 mt-28 sm:ml-0 sm:mr-0 z-10 ">
       { Item.map((project) => {
         return(
       <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 w-4/5 group" key={project.id} id="projCards">

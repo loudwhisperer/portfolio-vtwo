@@ -30,7 +30,7 @@ export default function Footer(){
     },
   ];
     return (
-<footer className="footer p-4 text-neutral-content w-full fixed bottom-0 left-0" id="footer">
+<footer className="footer p-4 text-neutral-content w-full fixed bottom-0 left-0 menu" >
   <div className="grid-flow-col lg:gap-28 place-self-center justify-self-center">
                 {Something.map((totem) => {
                 return (
